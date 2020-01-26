@@ -1,6 +1,38 @@
+<div class="title" style="text-align: center; color: red">
+  <h1>Eat-Da-Burger!</h1>
+</div>
+
+<ul>
+      {{#each burger}}
+    {{#unless devoured}}
+    {{> burger/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+
+</ul>
+<br>
+<br>
+<ul>
+        {{#each burger}}
+        {{#if devoured}}
+
+        <li> {{burger_name}}</li>
+        {{/if}}
+        {{/each}}
+      </ul>
+
+<div class="submitSection">
+<h2>Add a new burger</h2>
+<form >
+  Name:<br>
+  <input type="text" name="typeBurger" class="form"><br>
+
+</form>
+  <button class="submit" type="submit">Add Burger</button>
+
+<div class="foot" style="text-align: center;">
+  <p>Enter in a burger you would like to eat. Then click submit</p>
+</div>
 
 
-<div class="title" style="text-align: center; color: red"> <h1>Eat-Da-Burger!</h1></div>
-
-
-
+</div>

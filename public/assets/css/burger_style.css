@@ -1,0 +1,32 @@
+li, .change-burger {
+    margin-left:200px
+}
+
+li {
+    color: black;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.change-burger {
+    background-color: pink;
+    margin-bottom: 20px;
+}
+
+.form {
+    height: 50px;
+    width: auto;
+    
+}
+
+.submitSection {
+    text-align: center;
+}
+
+.submit {
+    margin-top: 10px
+}
+
+
+
+
