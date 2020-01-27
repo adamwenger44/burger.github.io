@@ -1,6 +1,7 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
+// prints as many question marks as the statement needs
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -11,6 +12,7 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
+// turns object into something sql can read
 function objToSql(ob) {
   var arr = [];
 
@@ -28,6 +30,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+// selects all burgers from the table
 var orm = {
   all: function ( tableInput, cb) {
     var queryString = `SELECT * FROM ${tableInput}`;
@@ -39,6 +42,8 @@ var orm = {
     });
     
   },
+
+  // can create a burger and insert into table
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
     queryString += " (";
@@ -58,7 +63,8 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+
+  // can update any burger in the table
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -76,6 +82,8 @@ var orm = {
       cb(result);
     });
   },
+
+  // can delete burger from the table
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
