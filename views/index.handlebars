@@ -1,38 +1,30 @@
-<div class="title" style="text-align: center; color: red">
-  <h1>Eat-Da-Burger!</h1>
-</div>
+<h2>Burgers that have not been devoured!</h2>
 
 <ul>
-      {{#each burger}}
-    {{#unless devoured}}
-    {{> burger/burger-block devoured=true}}
+  {{#each burger}}
+    {{#unless devour}}
+      {{> burger/burger-block devour=true}}
     {{/unless}}
-    {{/each}}
-
+  {{/each}}
 </ul>
-<br>
-<br>
+
+<h2>Burgers that have been devoured</h2>
+
 <ul>
-        {{#each burger}}
-        {{#if devoured}}
+  {{#each burger}}
+    {{#if devour}}
+      {{> burger/burger-block devour=false}}
+    {{/if}}
+  {{/each}}
+</ul>
 
-        <li> {{burger_name}}</li>
-        {{/if}}
-        {{/each}}
-      </ul>
+<h2>Add a burger</h2>
+<form class="create-form">
 
-<div class="submitSection">
-<h2>Add a new burger</h2>
-<form >
-  Name:<br>
-  <input type="text" name="typeBurger" class="form"><br>
+  <div class="form-group">
+    <label for="ca">burger name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
 
+  <button type="submit">Add</button>
 </form>
-  <button class="submit" type="submit">Add Burger</button>
-
-<div class="foot" style="text-align: center;">
-  <p>Enter in a burger you would like to eat. Then click submit</p>
-</div>
-
-
-</div>

@@ -13,18 +13,14 @@ li {
     margin-bottom: 20px;
 }
 
-.form {
-    height: 50px;
-    width: auto;
-    
+button {
+    background-color: pink;
+    height: 25px;
+    width: 55px;
 }
 
-.submitSection {
+.create-form {
     text-align: center;
-}
-
-.submit {
-    margin-top: 10px
 }
 
 
